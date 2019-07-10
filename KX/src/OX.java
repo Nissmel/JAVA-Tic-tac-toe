@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 
@@ -127,7 +126,7 @@ public class OX {
 		JFrame window = new JFrame();
 		window.getContentPane().setEnabled(false);
 		window.setBounds(10,10,502,605);
-		window.setTitle("Kolko krzyzyk");
+		window.setTitle("Tic tac toe");
 		window.setResizable(false);
 		window.setVisible(true);
 		window.getContentPane().setLayout(null);
@@ -344,7 +343,6 @@ public class OX {
 				btn9.setEnabled(true);
 				
 				whoStarts();
-				randomBoard();
 				textTurn.setText((turn==1?"X":"O") + " move");
 				
 			}
