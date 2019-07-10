@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 
@@ -44,7 +45,15 @@ public class OX {
 		//vertical
 		for(int i=0;i<3;i++)
 			if(board[0][i]==board[1][i] && board[1][i]==board[2][i])
+			{
 				textEnd.setText((turn==1?"X":"O") + " wins!");
+
+				SwingUtilities.invokeLater(new Runnable() {
+				    public void run() {
+				    	
+				    }
+				});
+			}
 		
 		//horizontal
 		for(int i=0;i<3;i++)
@@ -79,6 +88,9 @@ public class OX {
 					e.printStackTrace();
 				}
 			}
+			
+			
+			
 		});
 		
 		
