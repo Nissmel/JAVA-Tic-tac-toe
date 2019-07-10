@@ -27,9 +27,8 @@ public class OX {
 	
 	public void whoStarts()
 	{
-		
 		turn = rand.nextInt(2);
-
+		randomBoard();
 	}
 	
 	public static void randomBoard()
@@ -44,25 +43,17 @@ public class OX {
 	{
 		//vertical
 		for(int i=0;i<3;i++)
-			if(board[0][i]==board[1][i] && board[1][i]==board[2][i])
-			{
-				textEnd.setText((turn==1?"X":"O") + " wins!");
-
-				SwingUtilities.invokeLater(new Runnable() {
-				    public void run() {
-				    	
-				    }
-				});
-			}
+			if(board[0][i]==board[1][i] && board[1][i]==board[2][i])				
+				endGame();
 		
 		//horizontal
 		for(int i=0;i<3;i++)
 			if(board[i][0]==board[i][1] && board[i][1]==board[i][2])
-				textEnd.setText((turn==1?"X":"O") + " wins!");
+				endGame();
 
 		//diagonal
 		if((board[0][0]==board[1][1] && board[1][1]==board[2][2]) || (board[2][0]==board[1][1] && board[1][1]==board[0][2]))
-			textEnd.setText((turn==1?"X":"O") + " wins!");
+			endGame();
 		else 
 			nextTurn();
 	}
@@ -76,6 +67,21 @@ public class OX {
 		
 		textTurn.setText((turn==1?"X":"O") + " move");
 	}
+	
+	public void endGame()
+	{
+		textEnd.setText((turn==1?"X":"O") + " wins!");
+		btn1.setEnabled(false);
+		btn2.setEnabled(false);
+		btn3.setEnabled(false);
+		btn4.setEnabled(false);
+		btn5.setEnabled(false);
+		btn6.setEnabled(false);
+		btn7.setEnabled(false);
+		btn8.setEnabled(false);
+		btn9.setEnabled(false);		
+	}
+	
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -102,10 +108,20 @@ public class OX {
 	}
 	
 
+	JButton btn1;
+	JButton btn2;
+	JButton btn3;
+	JButton btn4;
+	JButton btn5;
+	JButton btn6;
+	JButton btn7;
+	JButton btn8;
+	JButton btn9;
+	
+	
 	private void initialize() {
 		
 		whoStarts();
-		randomBoard();	
 
 
 		JFrame window = new JFrame();
@@ -120,7 +136,7 @@ public class OX {
 		
 		
 		
-		JButton btn1 = new JButton("");
+		btn1 = new JButton("");
 		btn1.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn1.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn1.setBounds(36, 86, 120, 120);
@@ -138,7 +154,7 @@ public class OX {
 		
 		
 		
-		JButton btn2 = new JButton("");
+		btn2 = new JButton("");
 		btn2.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn2.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn2.setBounds(185, 86, 120, 120);
@@ -156,7 +172,7 @@ public class OX {
 		
 
 		
-		JButton btn3 = new JButton("");
+		btn3 = new JButton("");
 		btn3.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn3.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn3.setLocation(333, 86);
@@ -174,7 +190,7 @@ public class OX {
 		});
 		
 		
-		JButton btn4 = new JButton("");
+		btn4 = new JButton("");
 		btn4.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn4.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn4.setLocation(36, 228);
@@ -192,7 +208,7 @@ public class OX {
 		});
 		
 		
-		JButton btn5 = new JButton("");
+		btn5 = new JButton("");
 		btn5.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn5.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn5.setLocation(185, 228);
@@ -210,7 +226,7 @@ public class OX {
 		});
 		
 		
-		JButton btn6 = new JButton("");
+		btn6 = new JButton("");
 		btn6.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn6.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn6.setLocation(333, 228);
@@ -228,7 +244,7 @@ public class OX {
 		});
 		
 		
-		JButton btn7 = new JButton("");
+		btn7 = new JButton("");
 		btn7.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn7.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn7.setLocation(36, 373);
@@ -246,7 +262,7 @@ public class OX {
 		});
 		
 		
-		JButton btn8 = new JButton("");
+		btn8 = new JButton("");
 		btn8.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn8.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn8.setLocation(185, 373);
@@ -264,7 +280,7 @@ public class OX {
 		});
 		
 		
-		JButton btn9 = new JButton("");
+		btn9 = new JButton("");
 		btn9.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn9.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btn9.setLocation(333, 373);
