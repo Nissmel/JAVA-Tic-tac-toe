@@ -92,21 +92,14 @@ public class OX {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			}
-			
-			
-			
+			}			
 		});
-		
-		
-		
 	}
 
 	public OX() {
 		initialize();
 	}
 	
-
 	JButton btn1;
 	JButton btn2;
 	JButton btn3;
@@ -122,7 +115,6 @@ public class OX {
 		
 		whoStarts();
 
-
 		JFrame window = new JFrame();
 		window.getContentPane().setEnabled(false);
 		window.setBounds(10,10,502,605);
@@ -133,8 +125,7 @@ public class OX {
 		window.getContentPane().setBackground(Color.DARK_GRAY);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		
-		
+				
 		btn1 = new JButton("");
 		btn1.setFont(new Font("Verdana", Font.PLAIN, 77));
 		btn1.setBackground(UIManager.getColor("Button.disabledForeground"));
@@ -354,14 +345,5 @@ public class OX {
 		btnClear.setBounds(333, 20, 120, 38);
 		window.getContentPane().add(btnClear);
 
-		
-		
-		
-			
-		
-		
-
-		
-		
 	}
 }
