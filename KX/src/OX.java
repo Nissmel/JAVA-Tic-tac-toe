@@ -55,6 +55,7 @@ public class OX {
 			endGame();
 		else 
 			nextTurn();
+		
 	}
 	
 	public void nextTurn()
