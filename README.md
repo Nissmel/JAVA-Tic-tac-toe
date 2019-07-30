@@ -11,8 +11,6 @@ Game contain implementation of:
 - information who won
 
 
-
-
 ### [See my page!](https://nissmel.github.io/)
 
 
