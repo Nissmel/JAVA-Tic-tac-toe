@@ -14,5 +14,4 @@ Game contain implementation of:
 
 
 
-
 ![photo](https://github.com/Nissmel/Tic-tac-toe/blob/master/KX/XO.png)
