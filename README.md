@@ -13,5 +13,4 @@ Game contain implementation of:
 ### [See my page!](https://nissmel.github.io/)
 
 
-
 ![photo](https://github.com/Nissmel/Tic-tac-toe/blob/master/KX/XO.png)
