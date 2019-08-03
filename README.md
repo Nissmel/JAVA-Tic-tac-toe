@@ -10,6 +10,7 @@ Game contain implementation of:
 - game board clear + new game 
 - information who won
 
+
 ### [See my page!](https://nissmel.github.io/)
 
 
