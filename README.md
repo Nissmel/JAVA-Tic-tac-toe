@@ -1,4 +1,4 @@
-# Space Invaders 
+# Tic tac toe
 ### By Łukasz Karasiński
 
 Project contain Tic tac toe game.
