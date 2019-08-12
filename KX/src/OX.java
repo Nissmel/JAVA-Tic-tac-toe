@@ -344,6 +344,5 @@ public class OX {
 		btnClear.setBackground(UIManager.getColor("Button.disabledForeground"));
 		btnClear.setBounds(333, 20, 120, 38);
 		window.getContentPane().add(btnClear);
-
 	}
 }
