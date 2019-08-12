@@ -30,7 +30,7 @@ public class OX {
 		randomBoard();
 	}
 	
-	public static void randomBoard()
+	public  void randomBoard()
 	{
 		for(int i=0;i<3;i++)
 			for(int j=0;j<3;j++)
