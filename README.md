@@ -1,5 +1,6 @@
 # Tic tac toe
 ### By Łukasz Karasiński
+### Java (swing)
 
 Project contain Tic tac toe game.
 Game contain implementation of:
@@ -8,7 +9,7 @@ Game contain implementation of:
 - disabling buttons after pressed
 - queue change after button pressed
 - game board clear + new game 
-- information who won
+- information who won 
 
 
 ### [See my page!](https://nissmel.github.io/)
